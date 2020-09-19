@@ -7,8 +7,8 @@
 The App  also have bottom navbar for moblie users for better user experience
 
 ## Screenshots 
-![Main Screen](https://drive.google.com/file/d/1KMx0ofsIEyBZSVJYZLGz43Jj7p9Pa03I/view?usp=sharing)
-![True or false](https://drive.google.com/file/d/1WJjA2LcFm3ZmDUIHI8-CNmK-heustP1r/view?usp=sharing)
-![True or false inside](https://drive.google.com/file/d/1KMngfrLXFWCtMyQJ_5zBwBHjDV8Q6vF1/view?usp=sharing)
-![MCQ ](https://drive.google.com/file/d/1sxkokI6kop5okJfI5hGk5MxCpJWzMfeq/view?usp=sharing)
-![Mobile view](https://drive.google.com/file/d/1JCockvcSK2-nWBBHDeu4uhfw_onaS_ct/view?usp=sharing)
+![Main Screen](images/trivia1.png)
+![True or false](images/trivia2.png)
+![True or false inside](images/trivia3.png)
+![MCQ ](images/trivia4.png)
+![Mobile view](images/trivia5.png)
