@@ -22,7 +22,7 @@ const NavMobile = () => {
         <ul className="nav m-auto py-2" style={{ color: "white" }}>
           <Link to="/truefalse">
             <li className="nav-item active" style={linkStyle}>
-              T💥 / F❌
+              T✅ F❌
             </li>
           </Link>
           <Link to="/">

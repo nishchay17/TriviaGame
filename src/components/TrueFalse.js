@@ -3,7 +3,8 @@ import Drake from "../assets/Drake.png";
 import Pooh from "../assets/Pooh.jpg";
 import Carry from "../assets/carry.png";
 import Irfan from "../assets/irfan.jpg";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import ResultScore from "./ResultScore";
 
 const Image = [Drake, Pooh, Carry, Irfan];
 
@@ -14,7 +15,9 @@ const TrueFalse = (props) => {
   const [score, setScore] = useState(0);
   const [btnTrue, setbtnTrue] = useState("btn btn-outline-info btn-lg");
   const [btnFalse, setbtnFalse] = useState("btn btn-outline-info btn-lg");
-
+  if (typeof props.location.data == "undefined") {
+    return <Redirect to="/truefalse"></Redirect>;
+  }
   const checkTrue = () => {
     if (questions[amount].correct_answer === "True") {
       setScore(score + 5);
@@ -53,17 +56,10 @@ const TrueFalse = (props) => {
       return (
         <div>
           <div className="container border p-3">
-            <div className="h4 m-3">
-              {questions[amount].question
-                .replace("&quot;", `'`)
-                .replace("&quot;", `'`)
-                .replace("&quot;", `'`)
-                .replace("&eacute;", "")
-                .replace("&eacute;", "")
-                .replace("&#039;", `'`)
-                .replace("&#039;", `'`)
-                .replace("&quot;", `'`)}
-            </div>
+            <div
+              className="h4 m-3"
+              dangerouslySetInnerHTML={{__html:questions[amount].question}}
+            />
             <div className="row align-items-center">
               <div className="col">
                 <div className="row">
@@ -78,6 +74,7 @@ const TrueFalse = (props) => {
                     <button
                       className={`${btnFalse} mt-4 mb-sm-5`}
                       onClick={checkFalse}
+                      aria-pressed="false"
                     >
                       False
                     </button>
@@ -86,6 +83,7 @@ const TrueFalse = (props) => {
                 <div className="row align-items-center">
                   <div className="col">
                     <button
+                      aria-pressed="false"
                       className={`${btnTrue} mt-4 mb-sm-5`}
                       onClick={checkTrue}
                     >
@@ -101,19 +99,24 @@ const TrueFalse = (props) => {
         </div>
       );
   };
+  //   const ResultScore = () => {
+  //     c
+  //     return (
 
-  const result = () => {
-    if (amount >= maxAmount)
-      return (
-        <div>
-          <div className="h1 my-5">
-            {score} is your score out of {5 * maxAmount}
-          </div>
-          <Link className="btn btn-outline-info btn-lg" to="/truefalse">
-            Go Back
-          </Link>
+  //     );
+  //   };
+
+  const Result = () => {
+    return (
+      <div>
+        <div className="h1 my-5 mx-3">
+          <ResultScore score={score} /> is your score out of {5 * maxAmount}
         </div>
-      );
+        <Link className="btn btn-outline-info btn-lg" to="/truefalse">
+          Go Back
+        </Link>
+      </div>
+    );
   };
 
   return (
@@ -124,7 +127,7 @@ const TrueFalse = (props) => {
           : "Completed 🎉"}
       </h1>
       {card()}
-      {result()}
+      {amount >= maxAmount && Result()}
     </div>
   );
 };

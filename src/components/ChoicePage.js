@@ -132,6 +132,10 @@ const ChoicePage = (props) => {
       <button onClick={onSubmit} className="btn btn-outline-info btn-lg mt-2">
         Start 🔥
       </button>
+      <br />
+      <br />
+      <br />
+      <br />
     </form>
   );
 

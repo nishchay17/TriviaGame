@@ -13,7 +13,7 @@ const Nav = () => {
         className="navbar navbar-expand-lg navbar-dark p-3 ml-auto text-center"
         style={{ backgroundColor: "black", fontSize: "1.4rem" }}
       >
-        <a className="navbar-brand d-md-none" href="/">
+        <a className="navbar-brand d-md-none" href="#">
           🔥Trivia Game🔥
         </a>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -30,7 +30,7 @@ const Nav = () => {
             </Link>
             <Link to="/truefalse">
               <li className="nav-item active mt-2" style={linkStyle}>
-                True💥 / False❌
+                True✅ / False❌
               </li>
             </Link>
             <Link to="/quiz">
