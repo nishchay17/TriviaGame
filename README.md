@@ -12,3 +12,5 @@ The App  also have bottom navbar for moblie users for better user experience
 ![True or false inside](images/trivia3.jpg)
 ![MCQ ](images/trivia4.jpg)
 ![Mobile view](images/trivia5.jpg)
+
+There is a small hidden thing in the app 😉
